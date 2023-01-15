@@ -32,7 +32,7 @@ jobs:
           cache: maven
 
       - name: Prepare backend resources
-        run: cd backend && rm -rf src/master/resources/static && cp -a ../frontend/build src/master/resources/static
+        run: cd backend && rm -rf src/main/resources/static && cp -a ../frontend/build src/main/resources/static
 
       - name: Build with Maven
         run: cd backend && ./mvnw -B package --file pom.xml
